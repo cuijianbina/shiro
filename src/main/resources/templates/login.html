@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html xmlns：th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>登录界面</title>
+<!--  <script th:src="@{~/shiro/static/js/jquery-2.1.1.min.js}"></script>-->
 </head>
 <body>
 <form action="index" method="post">
-用户名：<input name="name" type="text"/>
+用户名：<input name="name" type="text" id="name" />
 <br>
-密 码：<input name="password" type="password"/><br>
+密 码：<input name="password" type="password" id="password" /><br>
+<input type="checkbox" name="remember" />remember me<br />
 <input type="submit" value="登录"><br>
-<font color="red"><th:text="${msg}"></th:text></font>
 <h3 th:text="${msg}" style="color: red"></h3>
+<!--  <script type="text/javascript">
+			$(function(){
+				$("#name").blur(function(){
+					console.log($(this).val());
+				})
+			})
+</script>
+-->
 </form>
+
 </body>
 </html>

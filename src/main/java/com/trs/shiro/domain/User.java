@@ -20,6 +20,5 @@ public class User {
 	
 	private String password;
 	
-	private String perms;//权限
-	
+	private Integer status;
 }
