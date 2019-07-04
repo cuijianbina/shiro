@@ -1,0 +1,17 @@
+sysconfig:
+    configss: 
+      VALIDCODE_REDIS_LIVETIME: 1800
+one:
+    two:
+     three:
+      - 1
+      - 2
+      - 4
+      - 8
+
+oneMore:
+   twoMore:
+      threeMore:
+         -8
+         -0
+         -8

@@ -6,6 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 import lombok.Data;
 
 @Data
@@ -16,9 +19,18 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
+	@Expose
+	@SerializedName("newname")
 	private String name;
 	
 	private String password;
 	
 	private Integer status;
+
+	@Override
+	public String toString() {
+		return "{\"id\":\""+id+"\",\"name\":\""+ name+"\"}";
+	}
+	
+	
 }
